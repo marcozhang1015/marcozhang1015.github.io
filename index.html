@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marco Zhang | Portfolio</title>
+    <meta
+      name="description"
+      content="Marco Zhang's personal website featuring technical projects, experience, and a photography portfolio."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Cormorant+Garamond:wght@500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#top">
+          <span class="brand-mark">MZ</span>
+          <span class="brand-copy">
+            <strong>Marco Zhang</strong>
+            <span>Marco Zhang's Personal Website</span>
+          </span>
+        </a>
+
+        <nav class="view-switcher" aria-label="Primary views">
+          <button class="view-switch active" type="button" data-view-target="profile">
+            Profile
+            <span>About, projects, experience</span>
+          </button>
+          <button class="view-switch" type="button" data-view-target="gallery">
+            Photography
+            <span>Full gallery and lightbox</span>
+          </button>
+        </nav>
+      </header>
+
+      <main id="top">
+        <section class="view-panel active" data-view="profile" aria-labelledby="profile-title">
+          <section class="hero">
+            <div class="hero-visual">
+              <div class="portrait-card">
+                <img src="assets/images/site/profile.jpg" alt="Xiaolin Zhang profile photo" />
+              </div>
+            </div>
+
+            <div class="hero-copy">
+              <p class="eyebrow">Profile</p>
+              <h1 id="profile-title">Xiaolin Zhang</h1>
+              <p class="profile-preferred"><span>Preferred Name</span> Marco</p>
+
+              <ul class="profile-list">
+                <li>
+                  <span class="label">Hometown</span>
+                  <strong>Beijing</strong>
+                </li>
+                <li>
+                  <span class="label">Major</span>
+                  <strong>Statistics &amp; Computer Science</strong>
+                </li>
+                <li>
+                  <span class="label">School</span>
+                  <strong>Washington University in St. Louis</strong>
+                </li>
+                <li>
+                  <span class="label">Graduate Year</span>
+                  <strong>2028</strong>
+                </li>
+              </ul>
+
+              <div class="profile-note-card">
+                <span class="label">Fun Fact</span>
+                <p>One of my photographs was featured by Vogue.</p>
+              </div>
+
+              <div class="profile-note-card">
+                <span class="label">Research Interest</span>
+                <p>
+                  AI systems, machine learning applications, full-stack product engineering, human-centered software,
+                  and tools that connect technical depth with intuitive user experience.
+                </p>
+              </div>
+
+              <div class="hero-actions">
+                <a class="button primary" href="assets/docs/Marco_Zhang_Resume.pdf" download>Download CV</a>
+                <a class="button secondary" href="https://github.com/marcozhang1015" target="_blank" rel="noreferrer">GitHub</a>
+                <a class="button secondary" href="https://www.linkedin.com/in/xiaolinmarcozhang" target="_blank" rel="noreferrer">LinkedIn</a>
+              </div>
+            </div>
+          </section>
+
+          <section class="section-block">
+            <div class="section-heading">
+              <p class="eyebrow">About Me</p>
+              <h2>Analytical, product-minded, and excited by hard problems.</h2>
+            </div>
+            <div class="about-layout">
+              <p>
+                My academic training in statistics gives me a strong foundation for reasoning with data, while computer
+                science helps me translate that reasoning into products people can actually use. I care about clean
+                architecture, thoughtful interfaces, and solving problems in a way that scales.
+              </p>
+              <p>
+                Outside of coding, photography sharpens the same instincts I use in engineering: composition,
+                intentionality, patience, and attention to detail. That mix of technical depth and creative perspective
+                shapes the way I build.
+              </p>
+            </div>
+          </section>
+
+          <section class="section-block">
+            <div class="section-heading">
+              <p class="eyebrow">Technical Toolkit</p>
+              <h2>Technologies I use to ship software.</h2>
+            </div>
+            <div class="skills-cloud">
+              <span>Java</span>
+              <span>JavaScript</span>
+              <span>Python</span>
+              <span>Go</span>
+              <span>Kotlin</span>
+              <span>React</span>
+              <span>HTML/CSS</span>
+              <span>Spring Boot</span>
+              <span>Express.js</span>
+              <span>MySQL</span>
+              <span>PostgreSQL</span>
+              <span>AWS</span>
+              <span>GCP</span>
+              <span>OpenAI API</span>
+              <span>LangChain</span>
+              <span>JWT Auth</span>
+            </div>
+          </section>
+
+          <section class="section-block">
+            <div class="section-heading">
+              <h2>Projects</h2>
+            </div>
+
+            <div class="project-grid">
+              <article class="project-card">
+                <div class="project-visual">
+                  <img src="assets/images/projects/online-order-real.png" alt="OnlineOrder project interface screenshot" />
+                </div>
+                <div class="project-meta">Spring Boot + React + AWS</div>
+                <h3>OnlineOrder</h3>
+                <p>
+                  A full-stack online food ordering platform with secure authentication, restaurant and menu browsing,
+                  cart management, checkout flows, and cloud deployment.
+                </p>
+                <ul>
+                  <li>Built CRUD REST APIs and layered controller, service, and repository architecture.</li>
+                  <li>Integrated PostgreSQL on AWS RDS with Spring Data JDBC and Spring Security.</li>
+                  <li>Shipped a React + Ant Design frontend and deployed with AWS App Runner.</li>
+                </ul>
+                <div class="card-actions">
+                  <a class="button tertiary" href="https://github.com/marcozhang1015/online-order-application" target="_blank" rel="noreferrer">View Repo</a>
+                </div>
+              </article>
+
+              <article class="project-card">
+                <div class="project-visual">
+                  <img src="assets/images/projects/social-ai-real.png" alt="SocialAI project interface screenshot" />
+                </div>
+                <div class="project-meta">React + Go + OpenAI + ElasticSearch</div>
+                <h3>SocialAI</h3>
+                <p>
+                  An AI-enhanced social network that combines content creation, search, and scalable backend services
+                  into one interactive platform.
+                </p>
+                <ul>
+                  <li>Designed the social interface in React with token-based auth and route protection.</li>
+                  <li>Used DALL-E 3 support for post creation workflows and creative augmentation.</li>
+                  <li>Deployed a Go web service and ElasticSearch-backed search infrastructure on GCP.</li>
+                </ul>
+                <div class="card-actions">
+                  <a class="button tertiary" href="https://github.com/marcozhang1015/social-ai" target="_blank" rel="noreferrer">View Repo</a>
+                </div>
+              </article>
+
+              <article class="project-card">
+                <div class="project-visual">
+                  <img src="assets/images/projects/next-ai-real.png" alt="Next AI project interface screenshot" />
+                </div>
+                <div class="project-meta">Express + React + GPT-5 + LangChain</div>
+                <h3>Next AI</h3>
+                <p>
+                  A PDF question-answering AI agent that lets users upload documents and chat with them in real time
+                  through a streamlined web interface.
+                </p>
+                <ul>
+                  <li>Created a conversational React interface with document upload and response display.</li>
+                  <li>Built Express APIs and vector-backed retrieval flow for performant responses.</li>
+                  <li>Integrated OpenAI and LangChain for document parsing, chunking, retrieval, and generation.</li>
+                </ul>
+                <div class="card-actions">
+                  <a class="button tertiary" href="https://github.com/marcozhang1015/nextai" target="_blank" rel="noreferrer">View Repo</a>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="section-block">
+            <div class="section-heading">
+              <h2>Experience</h2>
+            </div>
+
+            <div class="timeline">
+              <article class="timeline-item timeline-item-wide">
+                <span class="timeline-tag">Teaching Assistant</span>
+                <h3>
+                  <span class="course-line">CSE 2407 Introduction to Data Structure and Algorithms</span>
+                  <span class="course-line">CSE 1302 Introduction to Computer Engineering</span>
+                  <span class="course-line">CSE 3302 Object Oriented Studio</span>
+                </h3>
+                <p>
+                  Supported students through studio instruction, debugging help, and hands-on guidance in Java, C++,
+                  and core computing concepts.
+                </p>
+              </article>
+
+              <article class="timeline-item">
+                <span class="timeline-tag">Photographer</span>
+                <h3>WashU Student Life Newspaper</h3>
+                <div class="experience-gallery studentlife-gallery">
+                  <a
+                    class="editorial-shot"
+                    href="https://www.studlife.com/scene/2024/10/16/celebrating-a-century-of-william-h-gass"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img
+                      src="https://www.studlife.com/files/2024/10/1William-Gass-by-Marco-Zhang-3-760x507.jpg"
+                      alt="William H. Gass centenary event photo by Marco Zhang for Student Life"
+                    />
+                    <span>Scene Feature</span>
+                  </a>
+                  <a
+                    class="editorial-shot"
+                    href="https://www.studlife.com/sports/2024/09/11/no-1-womens-soccer-defeats-north-central-with-decisive-5-1-win"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img
+                      src="https://www.studlife.com/files/2024/09/wsoc3_by-Marco-Zhang-760x507.jpg"
+                      alt="WashU women's soccer photo by Marco Zhang for Student Life"
+                    />
+                    <span>Sports Coverage</span>
+                  </a>
+                  <a
+                    class="editorial-shot"
+                    href="https://www.studlife.com/news/2024/10/23/bears-den-launches-all-you-care-to-eat-pilot-program"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img
+                      src="https://www.studlife.com/files/2024/10/USE-bd-by-Marco-Zhang-2-760x507.jpg"
+                      alt="Bear's Den Student Life photo by Marco Zhang"
+                    />
+                    <span>Print Issue Feature</span>
+                  </a>
+                </div>
+                <p>
+                  Covered campus life and student stories through photography, creating editorial images for publication
+                  and documenting events with an eye for visual narrative, composition, and atmosphere.
+                </p>
+              </article>
+
+              <article class="timeline-item">
+                <div class="experience-gallery">
+                  <img src="assets/images/experience/formula-harness-front.jpg" alt="Front harness work for WashU Formula SAE" />
+                  <img src="assets/images/experience/formula-harness-main.jpg" alt="Main harness work for WashU Formula SAE" />
+                  <img src="assets/images/experience/formula-dashboard.png" alt="Formula SAE electronics dashboard reference" />
+                </div>
+                <span class="timeline-tag">WashU Formula SAE</span>
+                <h3>Electronics and Data Acquisition Team</h3>
+                <p>
+                  Designed and optimized the race car's electronic and wiring systems, created sensor board work in
+                  Altium, and managed the full wiring harness using Rapid Harness.
+                </p>
+                <div class="formula-feature">
+                  <img src="assets/images/gallery/racing.JPG" alt="WashU Formula SAE racing photo" loading="lazy" />
+                </div>
+              </article>
+            </div>
+          </section>
+        </section>
+
+        <section class="view-panel" data-view="gallery" aria-labelledby="gallery-title">
+          <section class="gallery-hero gallery-hero-centered">
+            <p class="eyebrow">Photography</p>
+            <h2 id="gallery-title">Photography Portfolio</h2>
+            <div class="gallery-essay">
+              <p>
+                This space is reserved for a longer curatorial note, artist statement, or short essay about how you
+                approach photography, what you are drawn to, and the kinds of visual stories you want your work to tell.
+              </p>
+            </div>
+          </section>
+
+          <section class="photovogue-feature">
+            <div class="photovogue-copy">
+              <p class="eyebrow">Photo Vogue</p>
+              <h3>Together</h3>
+              <p>Accepted by PhotoVogue.</p>
+              <a
+                class="button secondary"
+                href="https://www.vogue.com/photovogue/photographers/377957/gallery#4952620"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View on PhotoVogue
+              </a>
+            </div>
+            <a
+              class="photovogue-image-wrap"
+              href="https://www.vogue.com/photovogue/photographers/377957/gallery#4952620"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src="assets/images/gallery/vogue.jpg" alt="Together, selected for PhotoVogue" loading="lazy" />
+            </a>
+          </section>
+
+          <section class="gallery-grid"></section>
+        </section>
+      </main>
+    </div>
+
+    <div class="lightbox" aria-hidden="true">
+      <div class="lightbox-backdrop" data-lightbox-close></div>
+      <section class="lightbox-panel" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+        <button class="lightbox-close" type="button" aria-label="Close photo viewer" data-lightbox-close>
+          Close
+        </button>
+        <div class="lightbox-media">
+          <img class="lightbox-image" src="" alt="" />
+        </div>
+        <div class="lightbox-copy">
+          <p class="lightbox-kicker">Photography Detail</p>
+          <h3 id="lightbox-title"></h3>
+          <p class="lightbox-description"></p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

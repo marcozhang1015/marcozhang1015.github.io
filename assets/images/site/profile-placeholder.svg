@@ -1,0 +1,19 @@
+<svg width="800" height="960" viewBox="0 0 800 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="960" rx="48" fill="url(#paint0_linear)"/>
+  <rect x="32" y="32" width="736" height="896" rx="36" fill="url(#paint1_radial)"/>
+  <circle cx="400" cy="340" r="130" fill="#F1E5D4" fill-opacity="0.94"/>
+  <path d="M188 770C188 643.534 290.534 541 417 541H383C509.466 541 612 643.534 612 770V775C612 791.569 598.569 805 582 805H218C201.431 805 188 791.569 188 775V770Z" fill="#F1E5D4" fill-opacity="0.94"/>
+  <text x="400" y="890" text-anchor="middle" fill="#F7F2EA" font-family="Georgia, serif" font-size="54" letter-spacing="12">M A R C O</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="66.5" y1="59" x2="760.5" y2="894.5" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6F2617"/>
+      <stop offset="0.55" stop-color="#A6482D"/>
+      <stop offset="1" stop-color="#DBB07F"/>
+    </linearGradient>
+    <radialGradient id="paint1_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(160 102) rotate(51.8298) scale(1034.72 821.453)">
+      <stop stop-color="#D88A61" stop-opacity="0.44"/>
+      <stop offset="0.45" stop-color="#A6482D" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#16312D" stop-opacity="0.5"/>
+    </radialGradient>
+  </defs>
+</svg>
