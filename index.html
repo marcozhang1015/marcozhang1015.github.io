@@ -43,21 +43,50 @@
       <main id="top">
         <section class="view-panel active" data-view="profile" aria-labelledby="profile-title">
           <section class="hero">
+            <div class="hero-copy">
+              <p class="eyebrow">Portfolio / AI Systems / Photography</p>
+              <h1 id="profile-title">Xiaolin Zhang</h1>
+              <p class="profile-preferred"><span>Preferred Name</span> Marco</p>
+
+              <div class="profile-note-card">
+                <span class="label">About Me</span>
+                <p>
+                  I am a statistics and computer science student at Washington University in St. Louis, building across
+                  AI systems, full-stack products, and data-driven tools. I work quickly from ambiguous ideas to usable
+                  prototypes, care about clean implementation, and bring a visual eye from photography into product
+                  design. I am open to software engineering, AI/ML, research, and product-focused internship
+                  opportunities.
+                </p>
+              </div>
+
+              <div class="profile-note-card">
+                <span class="label">Research Direction</span>
+                <ul class="research-tags" aria-label="Research directions">
+                  <li>AI systems</li>
+                  <li>Machine learning applications</li>
+                  <li>Full-stack product engineering</li>
+                  <li>Human-centered software</li>
+                  <li>Reinforcement learning</li>
+                  <li>Computer vision</li>
+                </ul>
+              </div>
+
+              <div class="hero-actions">
+                <a class="button primary" href="assets/docs/Marco_Zhang_Resume.pdf" download>Download CV</a>
+                <a class="button secondary" href="https://github.com/marcozhang1015" target="_blank" rel="noreferrer">GitHub</a>
+                <a class="button secondary" href="https://www.linkedin.com/in/xiaolinmarcozhang" target="_blank" rel="noreferrer">LinkedIn</a>
+              </div>
+
+            </div>
+
             <div class="hero-visual">
               <div class="portrait-card">
                 <img src="assets/images/site/profile.jpg" alt="Xiaolin Zhang profile photo" />
               </div>
-            </div>
-
-            <div class="hero-copy">
-              <p class="eyebrow">Profile</p>
-              <h1 id="profile-title">Xiaolin Zhang</h1>
-              <p class="profile-preferred"><span>Preferred Name</span> Marco</p>
-
               <ul class="profile-list">
                 <li>
-                  <span class="label">Hometown</span>
-                  <strong>Beijing</strong>
+                  <span class="label">Based In</span>
+                  <strong>Beijing / St. Louis</strong>
                 </li>
                 <li>
                   <span class="label">Major</span>
@@ -68,48 +97,10 @@
                   <strong>Washington University in St. Louis</strong>
                 </li>
                 <li>
-                  <span class="label">Graduate Year</span>
+                  <span class="label">Graduation Year</span>
                   <strong>2028</strong>
                 </li>
               </ul>
-
-              <div class="profile-note-card">
-                <span class="label">Fun Fact</span>
-                <p>One of my photographs was featured by Vogue.</p>
-              </div>
-
-              <div class="profile-note-card">
-                <span class="label">Research Interest</span>
-                <p>
-                  AI systems, machine learning applications, full-stack product engineering, human-centered software,
-                  and tools that connect technical depth with intuitive user experience.
-                </p>
-              </div>
-
-              <div class="hero-actions">
-                <a class="button primary" href="assets/docs/Marco_Zhang_Resume.pdf" download>Download CV</a>
-                <a class="button secondary" href="https://github.com/marcozhang1015" target="_blank" rel="noreferrer">GitHub</a>
-                <a class="button secondary" href="https://www.linkedin.com/in/xiaolinmarcozhang" target="_blank" rel="noreferrer">LinkedIn</a>
-              </div>
-            </div>
-          </section>
-
-          <section class="section-block">
-            <div class="section-heading">
-              <p class="eyebrow">About Me</p>
-              <h2>Analytical, product-minded, and excited by hard problems.</h2>
-            </div>
-            <div class="about-layout">
-              <p>
-                My academic training in statistics gives me a strong foundation for reasoning with data, while computer
-                science helps me translate that reasoning into products people can actually use. I care about clean
-                architecture, thoughtful interfaces, and solving problems in a way that scales.
-              </p>
-              <p>
-                Outside of coding, photography sharpens the same instincts I use in engineering: composition,
-                intentionality, patience, and attention to detail. That mix of technical depth and creative perspective
-                shapes the way I build.
-              </p>
             </div>
           </section>
 
@@ -121,15 +112,18 @@
             <div class="skills-cloud">
               <span>Java</span>
               <span>JavaScript</span>
+              <span>TypeScript</span>
               <span>Python</span>
               <span>Go</span>
               <span>Kotlin</span>
               <span>React</span>
+              <span>Next.js</span>
               <span>HTML/CSS</span>
               <span>Spring Boot</span>
               <span>Express.js</span>
               <span>MySQL</span>
               <span>PostgreSQL</span>
+              <span>Supabase</span>
               <span>AWS</span>
               <span>GCP</span>
               <span>OpenAI API</span>
@@ -144,6 +138,27 @@
             </div>
 
             <div class="project-grid">
+              <article class="project-card project-card-featured">
+                <div class="project-award-badge">
+                  <span>Hackathon</span>
+                  <strong>Google Build with AI Hackathon<br />&amp; WashU DevFest 2026</strong>
+                  <small>Best in Agentic AI Track Award</small>
+                  <a class="button tertiary" href="https://devpost.com/software/course-survival-agent?ref_content=my-projects-tab&amp;ref_feature=my_projects" target="_blank" rel="noreferrer">View Devpost</a>
+                </div>
+                <div class="project-topic">Hackathon Project</div>
+                <div class="project-meta">Next.js + Supabase + Gemini + Canvas OAuth</div>
+                <h3>Course Survival Agent</h3>
+                <p>
+                  An agentic AI course planner that syncs with Canvas, parses syllabus grading policies, predicts
+                  scores, surfaces professor insights, and turns academic deadlines into study plans.
+                </p>
+                <ul>
+                  <li>Built real data flows across the Chrome extension, web UI, backend APIs, and Supabase database.</li>
+                  <li>Implemented Canvas OAuth integration and a companion sidebar for course-specific agent context.</li>
+                  <li>Connected grade prediction, calendar sync, professor insights, and weekly course pulse into one planning workflow.</li>
+                </ul>
+              </article>
+
               <article class="project-card">
                 <div class="project-visual">
                   <img src="assets/images/projects/online-order-real.png" alt="OnlineOrder project interface screenshot" />
@@ -296,12 +311,6 @@
           <section class="gallery-hero gallery-hero-centered">
             <p class="eyebrow">Photography</p>
             <h2 id="gallery-title">Photography Portfolio</h2>
-            <div class="gallery-essay">
-              <p>
-                This space is reserved for a longer curatorial note, artist statement, or short essay about how you
-                approach photography, what you are drawn to, and the kinds of visual stories you want your work to tell.
-              </p>
-            </div>
           </section>
 
           <section class="photovogue-feature">
