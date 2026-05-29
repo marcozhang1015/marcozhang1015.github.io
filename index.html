@@ -3,356 +3,369 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marco Zhang | Portfolio</title>
+    <title>Xiaolin “Marco” Zhang — Dossier № 001</title>
     <meta
       name="description"
-      content="Marco Zhang's personal website featuring technical projects, experience, and a photography portfolio."
+      content="The dossier of Xiaolin (Marco) Zhang — statistics & computer science at Washington University in St. Louis, AI systems, full-stack engineering, and a photography portfolio."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Cormorant+Garamond:wght@500;600;700&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
     <script defer src="script.js"></script>
   </head>
   <body>
-    <div class="page-shell">
-      <header class="topbar">
-        <a class="brand" href="#top">
-          <span class="brand-mark">MZ</span>
-          <span class="brand-copy">
-            <strong>Marco Zhang</strong>
-            <span>Marco Zhang's Personal Website</span>
-          </span>
+    <!-- atmospheric grain overlay -->
+    <div class="grain" aria-hidden="true"></div>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="masthead" id="top">
+      <div class="masthead-ticker" aria-hidden="true">
+        <span>Dossier № 001</span>
+        <span class="dot">/</span>
+        <span class="status"><i></i> Open to SWE · AI/ML · Research · Product internships</span>
+        <span class="dot">/</span>
+        <span>St. Louis · Beijing</span>
+        <span class="dot">/</span>
+        <span class="clock" data-clock>—:—:— CT</span>
+      </div>
+
+      <div class="masthead-main">
+        <a class="wordmark" href="#top">
+          <span class="wordmark-name">Zhang, Xiaolin</span>
+          <span class="wordmark-meta">aka “Marco” · ref. XZ-2028</span>
         </a>
 
-        <nav class="view-switcher" aria-label="Primary views">
-          <button class="view-switch active" type="button" data-view-target="profile">
-            Profile
-            <span>About, projects, experience</span>
+        <nav class="index-nav" aria-label="Sections">
+          <button class="index-tab active" type="button" data-view-target="profile">
+            <span class="idx">§01</span>
+            <span class="lbl">Profile</span>
           </button>
-          <button class="view-switch" type="button" data-view-target="gallery">
-            Photography
-            <span>Full gallery and lightbox</span>
+          <button class="index-tab" type="button" data-view-target="gallery">
+            <span class="idx">§02</span>
+            <span class="lbl">Plates</span>
           </button>
         </nav>
-      </header>
+      </div>
+    </header>
 
-      <main id="top">
-        <section class="view-panel active" data-view="profile" aria-labelledby="profile-title">
-          <section class="hero">
-            <div class="hero-copy">
-              <p class="eyebrow">Portfolio / AI Systems / Photography</p>
-              <h1 id="profile-title">Xiaolin Zhang</h1>
-              <p class="profile-preferred"><span>Preferred Name</span> Marco</p>
+    <main id="main">
+      <!-- ============================ §01 PROFILE ============================ -->
+      <section class="view-panel active" data-view="profile" aria-labelledby="profile-title">
+        <!-- Masthead / hero -->
+        <section class="hero reveal">
+          <p class="filemark">Dossier № 001 — Subject Profile — Compiled 2026</p>
 
-              <div class="profile-note-card">
-                <span class="label">About Me</span>
-                <p>
-                  I am a statistics and computer science student at Washington University in St. Louis, building across
-                  AI systems, full-stack products, and data-driven tools. I work quickly from ambiguous ideas to usable
-                  prototypes, care about clean implementation, and bring a visual eye from photography into product
-                  design. I am open to software engineering, AI/ML, research, and product-focused internship
-                  opportunities.
-                </p>
-              </div>
-
-              <div class="profile-note-card">
-                <span class="label">Research Direction</span>
-                <ul class="research-tags" aria-label="Research directions">
-                  <li>AI systems</li>
-                  <li>Machine learning applications</li>
-                  <li>Full-stack product engineering</li>
-                  <li>Human-centered software</li>
-                  <li>Reinforcement learning</li>
-                  <li>Computer vision</li>
-                </ul>
-              </div>
+          <div class="hero-grid">
+            <div class="hero-name">
+              <h1 id="profile-title">
+                <span class="line">Xiaolin</span>
+                <span class="line line-amp">Zhang<span class="amp">*</span></span>
+              </h1>
+              <p class="hero-footnote"><span class="amp">*</span> goes by <strong>Marco</strong> — statistics &amp; computer science, building across AI systems &amp; full-stack products.</p>
 
               <div class="hero-actions">
-                <a class="button primary" href="assets/docs/Marco_Zhang_Resume.pdf" download>Download CV</a>
-                <a class="button secondary" href="https://github.com/marcozhang1015" target="_blank" rel="noreferrer">GitHub</a>
-                <a class="button secondary" href="https://www.linkedin.com/in/xiaolinmarcozhang" target="_blank" rel="noreferrer">LinkedIn</a>
+                <a class="btn btn-solid" href="assets/docs/Marco_Zhang_Resume.pdf" download>
+                  <span>Download CV</span><span class="btn-arrow">↓</span>
+                </a>
+                <a class="btn btn-line" href="https://github.com/marcozhang1015" target="_blank" rel="noreferrer">
+                  <span>GitHub</span><span class="btn-arrow">↗</span>
+                </a>
+                <a class="btn btn-line" href="https://www.linkedin.com/in/xiaolinmarcozhang" target="_blank" rel="noreferrer">
+                  <span>LinkedIn</span><span class="btn-arrow">↗</span>
+                </a>
               </div>
-
             </div>
 
-            <div class="hero-visual">
-              <div class="portrait-card">
-                <img src="assets/images/site/profile.jpg" alt="Xiaolin Zhang profile photo" />
+            <figure class="hero-portrait">
+              <div class="plate-frame">
+                <img src="assets/images/site/profile.jpg" alt="Portrait of Xiaolin “Marco” Zhang" />
               </div>
-              <ul class="profile-list">
-                <li>
-                  <span class="label">Based In</span>
-                  <strong>Beijing / St. Louis</strong>
-                </li>
-                <li>
-                  <span class="label">Major</span>
-                  <strong>Statistics &amp; Computer Science</strong>
-                </li>
-                <li>
-                  <span class="label">School</span>
-                  <strong>Washington University in St. Louis</strong>
-                </li>
-                <li>
-                  <span class="label">Graduation Year</span>
-                  <strong>2028</strong>
-                </li>
-              </ul>
-            </div>
-          </section>
+              <figcaption><span class="mono">Fig. 01</span> — the subject</figcaption>
+            </figure>
+          </div>
 
-          <section class="section-block">
-            <div class="section-heading">
-              <p class="eyebrow">Technical Toolkit</p>
-              <h2>Technologies I use to ship software.</h2>
-            </div>
-            <div class="skills-cloud">
-              <span>Java</span>
-              <span>JavaScript</span>
-              <span>TypeScript</span>
-              <span>Python</span>
-              <span>Go</span>
-              <span>Kotlin</span>
-              <span>React</span>
-              <span>Next.js</span>
-              <span>HTML/CSS</span>
-              <span>Spring Boot</span>
-              <span>Express.js</span>
-              <span>MySQL</span>
-              <span>PostgreSQL</span>
-              <span>Supabase</span>
-              <span>AWS</span>
-              <span>GCP</span>
-              <span>OpenAI API</span>
-              <span>LangChain</span>
-              <span>JWT Auth</span>
-            </div>
-          </section>
-
-          <section class="section-block">
-            <div class="section-heading">
-              <h2>Projects</h2>
+          <div class="hero-lower">
+            <div class="about-block">
+              <p class="about-lead">
+                I am a statistics and computer science student at Washington University in St. Louis,
+                building across AI systems, full-stack products, and data-driven tools.
+              </p>
+              <p class="about-body">
+                I work quickly from ambiguous ideas to usable prototypes, care about clean implementation, and
+                bring a visual eye from photography into product design. I am open to software engineering, AI/ML,
+                research, and product-focused internship opportunities.
+              </p>
             </div>
 
-            <div class="project-grid">
-              <article class="project-card project-card-featured">
-                <div class="project-award-badge">
-                  <span>Hackathon</span>
-                  <strong>Google Build with AI Hackathon<br />&amp; WashU DevFest 2026</strong>
-                  <small>Best in Agentic AI Track Award</small>
-                  <a class="button tertiary" href="https://devpost.com/software/course-survival-agent?ref_content=my-projects-tab&amp;ref_feature=my_projects" target="_blank" rel="noreferrer">View Devpost</a>
-                </div>
-                <div class="project-topic">Hackathon Project</div>
-                <div class="project-meta">Next.js + Supabase + Gemini + Canvas OAuth</div>
-                <h3>Course Survival Agent</h3>
-                <p>
-                  An agentic AI course planner that syncs with Canvas, parses syllabus grading policies, predicts
-                  scores, surfaces professor insights, and turns academic deadlines into study plans.
-                </p>
-                <ul>
-                  <li>Built real data flows across the Chrome extension, web UI, backend APIs, and Supabase database.</li>
-                  <li>Implemented Canvas OAuth integration and a companion sidebar for course-specific agent context.</li>
-                  <li>Connected grade prediction, calendar sync, professor insights, and weekly course pulse into one planning workflow.</li>
-                </ul>
-              </article>
+            <dl class="spec-sheet" aria-label="Subject specifications">
+              <div class="spec-row"><dt>Based in</dt><dd>Beijing / St. Louis</dd></div>
+              <div class="spec-row"><dt>Field</dt><dd>Statistics &amp; Computer Science</dd></div>
+              <div class="spec-row"><dt>Institution</dt><dd>WashU in St. Louis</dd></div>
+              <div class="spec-row"><dt>Class of</dt><dd>2028</dd></div>
+              <div class="spec-row"><dt>Status</dt><dd class="dd-accent">Seeking internships</dd></div>
+            </dl>
+          </div>
 
-              <article class="project-card">
-                <div class="project-visual">
-                  <img src="assets/images/projects/online-order-real.png" alt="OnlineOrder project interface screenshot" />
-                </div>
-                <div class="project-meta">Spring Boot + React + AWS</div>
-                <h3>OnlineOrder</h3>
-                <p>
-                  A full-stack online food ordering platform with secure authentication, restaurant and menu browsing,
-                  cart management, checkout flows, and cloud deployment.
-                </p>
-                <ul>
-                  <li>Built CRUD REST APIs and layered controller, service, and repository architecture.</li>
-                  <li>Integrated PostgreSQL on AWS RDS with Spring Data JDBC and Spring Security.</li>
-                  <li>Shipped a React + Ant Design frontend and deployed with AWS App Runner.</li>
-                </ul>
-                <div class="card-actions">
-                  <a class="button tertiary" href="https://github.com/marcozhang1015/online-order-application" target="_blank" rel="noreferrer">View Repo</a>
-                </div>
-              </article>
-
-              <article class="project-card">
-                <div class="project-visual">
-                  <img src="assets/images/projects/social-ai-real.png" alt="SocialAI project interface screenshot" />
-                </div>
-                <div class="project-meta">React + Go + OpenAI + ElasticSearch</div>
-                <h3>SocialAI</h3>
-                <p>
-                  An AI-enhanced social network that combines content creation, search, and scalable backend services
-                  into one interactive platform.
-                </p>
-                <ul>
-                  <li>Designed the social interface in React with token-based auth and route protection.</li>
-                  <li>Used DALL-E 3 support for post creation workflows and creative augmentation.</li>
-                  <li>Deployed a Go web service and ElasticSearch-backed search infrastructure on GCP.</li>
-                </ul>
-                <div class="card-actions">
-                  <a class="button tertiary" href="https://github.com/marcozhang1015/social-ai" target="_blank" rel="noreferrer">View Repo</a>
-                </div>
-              </article>
-
-              <article class="project-card">
-                <div class="project-visual">
-                  <img src="assets/images/projects/next-ai-real.png" alt="Next AI project interface screenshot" />
-                </div>
-                <div class="project-meta">Express + React + GPT-5 + LangChain</div>
-                <h3>Next AI</h3>
-                <p>
-                  A PDF question-answering AI agent that lets users upload documents and chat with them in real time
-                  through a streamlined web interface.
-                </p>
-                <ul>
-                  <li>Created a conversational React interface with document upload and response display.</li>
-                  <li>Built Express APIs and vector-backed retrieval flow for performant responses.</li>
-                  <li>Integrated OpenAI and LangChain for document parsing, chunking, retrieval, and generation.</li>
-                </ul>
-                <div class="card-actions">
-                  <a class="button tertiary" href="https://github.com/marcozhang1015/nextai" target="_blank" rel="noreferrer">View Repo</a>
-                </div>
-              </article>
-            </div>
-          </section>
-
-          <section class="section-block">
-            <div class="section-heading">
-              <h2>Experience</h2>
-            </div>
-
-            <div class="timeline">
-              <article class="timeline-item timeline-item-wide">
-                <span class="timeline-tag">Teaching Assistant</span>
-                <h3>
-                  <span class="course-line">CSE 2407 Introduction to Data Structure and Algorithms</span>
-                  <span class="course-line">CSE 1302 Introduction to Computer Engineering</span>
-                  <span class="course-line">CSE 3302 Object Oriented Studio</span>
-                </h3>
-                <p>
-                  Supported students through studio instruction, debugging help, and hands-on guidance in Java, C++,
-                  and core computing concepts.
-                </p>
-              </article>
-
-              <article class="timeline-item">
-                <span class="timeline-tag">Photographer</span>
-                <h3>WashU Student Life Newspaper</h3>
-                <div class="experience-gallery studentlife-gallery">
-                  <a
-                    class="editorial-shot"
-                    href="https://www.studlife.com/scene/2024/10/16/celebrating-a-century-of-william-h-gass"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <img
-                      src="https://www.studlife.com/files/2024/10/1William-Gass-by-Marco-Zhang-3-760x507.jpg"
-                      alt="William H. Gass centenary event photo by Marco Zhang for Student Life"
-                    />
-                    <span>Scene Feature</span>
-                  </a>
-                  <a
-                    class="editorial-shot"
-                    href="https://www.studlife.com/sports/2024/09/11/no-1-womens-soccer-defeats-north-central-with-decisive-5-1-win"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <img
-                      src="https://www.studlife.com/files/2024/09/wsoc3_by-Marco-Zhang-760x507.jpg"
-                      alt="WashU women's soccer photo by Marco Zhang for Student Life"
-                    />
-                    <span>Sports Coverage</span>
-                  </a>
-                  <a
-                    class="editorial-shot"
-                    href="https://www.studlife.com/news/2024/10/23/bears-den-launches-all-you-care-to-eat-pilot-program"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <img
-                      src="https://www.studlife.com/files/2024/10/USE-bd-by-Marco-Zhang-2-760x507.jpg"
-                      alt="Bear's Den Student Life photo by Marco Zhang"
-                    />
-                    <span>Print Issue Feature</span>
-                  </a>
-                </div>
-                <p>
-                  Covered campus life and student stories through photography, creating editorial images for publication
-                  and documenting events with an eye for visual narrative, composition, and atmosphere.
-                </p>
-              </article>
-
-              <article class="timeline-item">
-                <div class="experience-gallery">
-                  <img src="assets/images/experience/formula-harness-front.jpg" alt="Front harness work for WashU Formula SAE" />
-                  <img src="assets/images/experience/formula-harness-main.jpg" alt="Main harness work for WashU Formula SAE" />
-                  <img src="assets/images/experience/formula-dashboard.png" alt="Formula SAE electronics dashboard reference" />
-                </div>
-                <span class="timeline-tag">WashU Formula SAE</span>
-                <h3>Electronics and Data Acquisition Team</h3>
-                <p>
-                  Designed and optimized the race car's electronic and wiring systems, created sensor board work in
-                  Altium, and managed the full wiring harness using Rapid Harness.
-                </p>
-                <div class="formula-feature">
-                  <img src="assets/images/gallery/racing.JPG" alt="WashU Formula SAE racing photo" loading="lazy" />
-                </div>
-              </article>
-            </div>
-          </section>
+          <ul class="research-line" aria-label="Research directions">
+            <li>AI systems</li>
+            <li>Machine learning applications</li>
+            <li>Full-stack product engineering</li>
+            <li>Human-centered software</li>
+            <li>Reinforcement learning</li>
+            <li>Computer vision</li>
+          </ul>
         </section>
 
-        <section class="view-panel" data-view="gallery" aria-labelledby="gallery-title">
-          <section class="gallery-hero gallery-hero-centered">
-            <p class="eyebrow">Photography</p>
-            <h2 id="gallery-title">Photography Portfolio</h2>
-          </section>
+        <!-- Skills marquee -->
+        <section class="marquee reveal" aria-label="Technical toolkit">
+          <div class="marquee-rail" aria-hidden="true">
+            <span class="marquee-set">
+              <em>Java</em><em>JavaScript</em><em>TypeScript</em><em>Python</em><em>Go</em><em>Kotlin</em><em>React</em><em>Next.js</em><em>HTML / CSS</em><em>Spring Boot</em><em>Express.js</em><em>MySQL</em><em>PostgreSQL</em><em>Supabase</em><em>AWS</em><em>GCP</em><em>OpenAI API</em><em>LangChain</em><em>JWT Auth</em>
+            </span>
+            <span class="marquee-set">
+              <em>Java</em><em>JavaScript</em><em>TypeScript</em><em>Python</em><em>Go</em><em>Kotlin</em><em>React</em><em>Next.js</em><em>HTML / CSS</em><em>Spring Boot</em><em>Express.js</em><em>MySQL</em><em>PostgreSQL</em><em>Supabase</em><em>AWS</em><em>GCP</em><em>OpenAI API</em><em>LangChain</em><em>JWT Auth</em>
+            </span>
+          </div>
+        </section>
 
-          <section class="photovogue-feature">
-            <div class="photovogue-copy">
-              <p class="eyebrow">Photo Vogue</p>
+        <!-- Projects -->
+        <section class="dossier-section reveal" aria-labelledby="projects-title">
+          <header class="section-head">
+            <span class="section-no">§ 01.A</span>
+            <h2 id="projects-title">Selected Work</h2>
+            <span class="section-count">04 entries</span>
+          </header>
+
+          <!-- Featured -->
+          <article class="entry entry-featured entry-winner">
+            <div class="winner-ribbon">
+              <span class="winner-star" aria-hidden="true">★</span>
+              <span class="winner-text"><strong>1st Place</strong> — Best in Agentic AI Track</span>
+              <span class="winner-meta">Google Build with AI Hackathon · WashU DevFest 2026</span>
+            </div>
+
+            <div class="entry-body">
+              <div class="entry-meta">
+                <span class="entry-no">No. 01</span>
+                <span class="entry-tag">Next.js · Supabase · Gemini · Canvas OAuth</span>
+              </div>
+              <h3>Course Survival Agent</h3>
+              <p>
+                An agentic AI course planner that syncs with Canvas, parses syllabus grading policies, predicts
+                scores, surfaces professor insights, and turns academic deadlines into study plans.
+              </p>
+              <ul class="entry-notes">
+                <li>Built real data flows across the Chrome extension, web UI, backend APIs, and Supabase database.</li>
+                <li>Implemented Canvas OAuth integration and a companion sidebar for course-specific agent context.</li>
+                <li>Connected grade prediction, calendar sync, professor insights, and weekly course pulse into one workflow.</li>
+              </ul>
+            </div>
+            <aside class="entry-award">
+              <div class="stamp" aria-hidden="true">
+                <span class="stamp-star">★</span>
+                <span class="stamp-top">Best in Track</span>
+                <span class="stamp-mid">AGENTIC AI</span>
+                <span class="stamp-bot">1st · 2026</span>
+              </div>
+              <p class="award-where">Awarded at the Google Build with AI Hackathon &amp; WashU DevFest 2026.</p>
+              <a class="btn btn-solid btn-sm" href="https://devpost.com/software/course-survival-agent?ref_content=my-projects-tab&amp;ref_feature=my_projects" target="_blank" rel="noreferrer">
+                <span>View on Devpost</span><span class="btn-arrow">↗</span>
+              </a>
+            </aside>
+          </article>
+
+          <!-- Regular grid -->
+          <div class="entry-grid">
+            <article class="entry">
+              <figure class="entry-shot"><img src="assets/images/projects/online-order-real.png" alt="OnlineOrder interface screenshot" loading="lazy" /></figure>
+              <div class="entry-meta">
+                <span class="entry-no">No. 02</span>
+                <span class="entry-tag">Spring Boot · React · AWS</span>
+              </div>
+              <h3>OnlineOrder</h3>
+              <p>
+                A full-stack online food ordering platform with secure authentication, restaurant and menu
+                browsing, cart management, checkout flows, and cloud deployment.
+              </p>
+              <ul class="entry-notes">
+                <li>Built CRUD REST APIs and layered controller / service / repository architecture.</li>
+                <li>Integrated PostgreSQL on AWS RDS with Spring Data JDBC and Spring Security.</li>
+                <li>Shipped a React + Ant Design frontend and deployed with AWS App Runner.</li>
+              </ul>
+              <a class="entry-link" href="https://github.com/marcozhang1015/online-order-application" target="_blank" rel="noreferrer">View Repository <span>↗</span></a>
+            </article>
+
+            <article class="entry">
+              <figure class="entry-shot"><img src="assets/images/projects/social-ai-real.png" alt="SocialAI interface screenshot" loading="lazy" /></figure>
+              <div class="entry-meta">
+                <span class="entry-no">No. 03</span>
+                <span class="entry-tag">React · Go · OpenAI · ElasticSearch</span>
+              </div>
+              <h3>SocialAI</h3>
+              <p>
+                An AI-enhanced social network that combines content creation, search, and scalable backend
+                services into one interactive platform.
+              </p>
+              <ul class="entry-notes">
+                <li>Designed the social interface in React with token-based auth and route protection.</li>
+                <li>Used DALL·E 3 support for post creation workflows and creative augmentation.</li>
+                <li>Deployed a Go web service and ElasticSearch-backed search on GCP.</li>
+              </ul>
+              <a class="entry-link" href="https://github.com/marcozhang1015/social-ai" target="_blank" rel="noreferrer">View Repository <span>↗</span></a>
+            </article>
+
+            <article class="entry">
+              <figure class="entry-shot"><img src="assets/images/projects/next-ai-real.png" alt="Next AI interface screenshot" loading="lazy" /></figure>
+              <div class="entry-meta">
+                <span class="entry-no">No. 04</span>
+                <span class="entry-tag">Express · React · GPT-5 · LangChain</span>
+              </div>
+              <h3>Next AI</h3>
+              <p>
+                A PDF question-answering AI agent that lets users upload documents and chat with them in real
+                time through a streamlined web interface.
+              </p>
+              <ul class="entry-notes">
+                <li>Created a conversational React interface with document upload and response display.</li>
+                <li>Built Express APIs and a vector-backed retrieval flow for performant responses.</li>
+                <li>Integrated OpenAI and LangChain for parsing, chunking, retrieval, and generation.</li>
+              </ul>
+              <a class="entry-link" href="https://github.com/marcozhang1015/nextai" target="_blank" rel="noreferrer">View Repository <span>↗</span></a>
+            </article>
+          </div>
+        </section>
+
+        <!-- Experience -->
+        <section class="dossier-section reveal" aria-labelledby="experience-title">
+          <header class="section-head">
+            <span class="section-no">§ 01.B</span>
+            <h2 id="experience-title">Record of Experience</h2>
+            <span class="section-count">03 entries</span>
+          </header>
+
+          <article class="record">
+            <div class="record-rail"><span class="record-tag">Teaching Assistant</span></div>
+            <div class="record-body">
+              <h3>
+                <span class="course-line">CSE 2407 — Introduction to Data Structures &amp; Algorithms</span>
+                <span class="course-line">CSE 1302 — Introduction to Computer Engineering</span>
+                <span class="course-line">CSE 3302 — Object Oriented Studio</span>
+              </h3>
+              <p>
+                Supported students through studio instruction, debugging help, and hands-on guidance in Java,
+                C++, and core computing concepts.
+              </p>
+            </div>
+          </article>
+
+          <article class="record">
+            <div class="record-rail"><span class="record-tag">Photographer</span><span class="record-org">WashU Student Life</span></div>
+            <div class="record-body">
+              <p>
+                Covered campus life and student stories through photography, creating editorial images for
+                publication and documenting events with an eye for visual narrative, composition, and atmosphere.
+              </p>
+              <div class="plate-row">
+                <a class="plate-link" href="https://www.studlife.com/scene/2024/10/16/celebrating-a-century-of-william-h-gass" target="_blank" rel="noreferrer">
+                  <img src="https://www.studlife.com/files/2024/10/1William-Gass-by-Marco-Zhang-3-760x507.jpg" alt="William H. Gass centenary event, by Marco Zhang for Student Life" loading="lazy" />
+                  <span>Scene — Feature</span>
+                </a>
+                <a class="plate-link" href="https://www.studlife.com/sports/2024/09/11/no-1-womens-soccer-defeats-north-central-with-decisive-5-1-win" target="_blank" rel="noreferrer">
+                  <img src="https://www.studlife.com/files/2024/09/wsoc3_by-Marco-Zhang-760x507.jpg" alt="WashU women's soccer, by Marco Zhang for Student Life" loading="lazy" />
+                  <span>Sports — Coverage</span>
+                </a>
+                <a class="plate-link" href="https://www.studlife.com/news/2024/10/23/bears-den-launches-all-you-care-to-eat-pilot-program" target="_blank" rel="noreferrer">
+                  <img src="https://www.studlife.com/files/2024/10/USE-bd-by-Marco-Zhang-2-760x507.jpg" alt="Bear's Den pilot program, by Marco Zhang for Student Life" loading="lazy" />
+                  <span>News — Print Issue</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="record">
+            <div class="record-rail"><span class="record-tag">Electronics &amp; DAQ</span><span class="record-org">WashU Formula SAE</span></div>
+            <div class="record-body">
+              <p>
+                Designed and optimized the race car's electronic and wiring systems, created sensor board work in
+                Altium, and managed the full wiring harness using Rapid Harness.
+              </p>
+              <div class="plate-row plate-row-tight">
+                <img src="assets/images/experience/formula-harness-front.jpg" alt="Front wiring harness, WashU Formula SAE" loading="lazy" />
+                <img src="assets/images/experience/formula-harness-main.jpg" alt="Main wiring harness, WashU Formula SAE" loading="lazy" />
+                <img src="assets/images/experience/formula-dashboard.png" alt="Formula SAE electronics dashboard reference" loading="lazy" />
+              </div>
+              <div class="formula-feature">
+                <img src="assets/images/gallery/racing.JPG" alt="WashU Formula SAE race car on track" loading="lazy" />
+              </div>
+            </div>
+          </article>
+        </section>
+      </section>
+
+      <!-- ============================ §02 PLATES ============================ -->
+      <section class="view-panel" data-view="gallery" aria-labelledby="gallery-title">
+        <div class="plates-hall">
+          <header class="plates-head reveal">
+            <span class="section-no">§ 02 — Photography</span>
+            <h2 id="gallery-title">Index of Plates</h2>
+            <p>A working portfolio — campus editorial, travel, and selected frames.</p>
+          </header>
+
+          <section class="vogue reveal">
+            <div class="vogue-copy">
+              <span class="vogue-kicker">Exhibited — PhotoVogue</span>
               <h3>Together</h3>
-              <p>Accepted by PhotoVogue.</p>
-              <a
-                class="button secondary"
-                href="https://www.vogue.com/photovogue/photographers/377957/gallery#4952620"
-                target="_blank"
-                rel="noreferrer"
-              >
-                View on PhotoVogue
+              <p>Selected and accepted by Vogue’s PhotoVogue.</p>
+              <a class="btn btn-bone" href="https://www.vogue.com/photovogue/photographers/377957/gallery#4952620" target="_blank" rel="noreferrer">
+                <span>View on PhotoVogue</span><span class="btn-arrow">↗</span>
               </a>
             </div>
-            <a
-              class="photovogue-image-wrap"
-              href="https://www.vogue.com/photovogue/photographers/377957/gallery#4952620"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src="assets/images/gallery/vogue.jpg" alt="Together, selected for PhotoVogue" loading="lazy" />
+            <a class="vogue-image" href="https://www.vogue.com/photovogue/photographers/377957/gallery#4952620" target="_blank" rel="noreferrer">
+              <img src="assets/images/gallery/vogue.jpg" alt="“Together” — selected for PhotoVogue" loading="lazy" />
+              <span class="plate-no">Pl. 00</span>
             </a>
           </section>
 
-          <section class="gallery-grid"></section>
-        </section>
-      </main>
-    </div>
+          <section class="gallery-stage"></section>
+        </div>
+      </section>
+    </main>
 
+    <footer class="colophon">
+      <div class="colophon-inner">
+        <div class="colophon-block">
+          <span class="mono">Colophon</span>
+          <p>Set in Fraunces, Archivo &amp; IBM Plex Mono. Built by hand — static, dependency-free.</p>
+        </div>
+        <div class="colophon-block">
+          <span class="mono">Contact</span>
+          <p>
+            <a href="https://github.com/marcozhang1015" target="_blank" rel="noreferrer">GitHub ↗</a> ·
+            <a href="https://www.linkedin.com/in/xiaolinmarcozhang" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+          </p>
+        </div>
+        <div class="colophon-block colophon-end">
+          <span class="mono">End of document</span>
+          <p>Dossier № 001 · Xiaolin “Marco” Zhang · © 2026</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Lightbox -->
     <div class="lightbox" aria-hidden="true">
       <div class="lightbox-backdrop" data-lightbox-close></div>
       <section class="lightbox-panel" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
-        <button class="lightbox-close" type="button" aria-label="Close photo viewer" data-lightbox-close>
-          Close
-        </button>
+        <button class="lightbox-close" type="button" aria-label="Close photo viewer" data-lightbox-close>Close ✕</button>
         <div class="lightbox-media">
           <img class="lightbox-image" src="" alt="" />
         </div>
         <div class="lightbox-copy">
-          <p class="lightbox-kicker">Photography Detail</p>
+          <p class="lightbox-kicker">Plate — Detail</p>
           <h3 id="lightbox-title"></h3>
           <p class="lightbox-description"></p>
         </div>

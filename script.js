@@ -1,6 +1,10 @@
+document.documentElement.classList.add("js");
+
 const viewButtons = document.querySelectorAll("[data-view-target]");
 const panels = document.querySelectorAll("[data-view]");
-const galleryGrid = document.querySelector(".gallery-grid");
+const galleryStage = document.querySelector(".gallery-stage");
+const LEAD_IMAGE = "selected-1.jpg";
+const seriesOrder = ["selected", "boston", "cali", "summer"];
 const lightbox = document.querySelector(".lightbox");
 const lightboxImage = document.querySelector(".lightbox-image");
 const lightboxTitle = document.querySelector("#lightbox-title");
@@ -121,6 +125,12 @@ function activateView(target) {
     const active = panel.dataset.view === target;
     panel.classList.toggle("active", active);
     panel.setAttribute("aria-hidden", String(!active));
+
+    // Reveal animations inside a freshly shown panel won't trip the scroll
+    // observer (it was display:none), so mark them visible on switch.
+    if (active) {
+      panel.querySelectorAll(".reveal").forEach((el) => el.classList.add("in"));
+    }
   });
 }
 
@@ -144,45 +154,98 @@ function getCategory(filename) {
   return "selected";
 }
 
+function escapeAttr(value) {
+  return value.replace(/"/g, "&quot;");
+}
+
+function plateLabel(plateNo) {
+  return `Pl. ${String(plateNo).padStart(2, "0")}`;
+}
+
+function buildCard(filename, category, plateNo) {
+  const meta = featuredCopy[filename] || {};
+  const title = meta.title || "";
+  const description = meta.description || "";
+  const plate = plateLabel(plateNo);
+  const alt = title || `${categoryLabels[category]} photograph — ${plate}`;
+  const ariaLabel = title ? `Open ${title} (${plate})` : `Open ${plate}`;
+  const caption = title
+    ? `<figcaption class="card-caption"><span>${title}</span></figcaption>`
+    : "";
+
+  return `
+    <figure
+      class="gallery-card"
+      data-category="${category}"
+      data-title="${escapeAttr(title)}"
+      data-description="${escapeAttr(description)}"
+      tabindex="0"
+      role="button"
+      aria-label="${escapeAttr(ariaLabel)}"
+    >
+      <div class="gallery-media">
+        <img src="assets/images/gallery/${filename}" alt="${escapeAttr(alt)}" loading="lazy" />
+        <span class="plate-tag">${plate}</span>
+        ${caption}
+      </div>
+    </figure>
+  `;
+}
+
 function renderGallery() {
-  const counts = {
-    selected: 0,
-    boston: 0,
-    cali: 0,
-    summer: 0,
-  };
+  // Group every photo by series, preserving manifest order, while pulling the
+  // designated lead image out so it can headline the page as a full-width feature.
+  const groups = { selected: [], boston: [], cali: [], summer: [] };
 
-  const cards = galleryManifest.map((filename) => {
-    const category = getCategory(filename);
-    const meta = featuredCopy[filename] || {};
-
-    counts[category] += 1;
-
-    const frameNumber = String(counts[category]).padStart(2, "0");
-    const title = meta.title || "";
-    const description = meta.description || "";
-    const safeDescription = description.replace(/"/g, "&quot;");
-    const alt = title || `${categoryLabels[category]} photograph ${frameNumber}`;
-    const ariaLabel = title ? `Open ${title}` : `Open photograph ${frameNumber}`;
-
-    return `
-      <figure
-        class="gallery-card"
-        data-category="${category}"
-        data-title="${title}"
-        data-description="${safeDescription}"
-        tabindex="0"
-        role="button"
-        aria-label="${ariaLabel}"
-      >
-        <div class="gallery-media">
-          <img src="assets/images/gallery/${filename}" alt="${alt}" loading="lazy" />
-        </div>
-      </figure>
-    `;
+  galleryManifest.forEach((filename) => {
+    if (filename === LEAD_IMAGE) {
+      return;
+    }
+    groups[getCategory(filename)].push(filename);
   });
 
-  galleryGrid.innerHTML = cards.join("");
+  const leadMeta = featuredCopy[LEAD_IMAGE] || {};
+  const leadTitle = leadMeta.title || "";
+  const leadDescription = leadMeta.description || "";
+  const leadAlt = leadTitle || "Featured photograph";
+
+  // Plates are numbered continuously across the whole hall (lead = Pl. 01).
+  let plateNo = 1;
+
+  const lead = `
+    <figure
+      class="gallery-lead gallery-card"
+      data-category="${getCategory(LEAD_IMAGE)}"
+      data-title="${escapeAttr(leadTitle)}"
+      data-description="${escapeAttr(leadDescription)}"
+      tabindex="0"
+      role="button"
+      aria-label="${escapeAttr(leadTitle ? `Open ${leadTitle} (${plateLabel(plateNo)})` : "Open featured plate")}"
+    >
+      <div class="gallery-media">
+        <img src="assets/images/gallery/${LEAD_IMAGE}" alt="${escapeAttr(leadAlt)}" loading="eager" />
+        <span class="plate-no">${plateLabel(plateNo)}</span>
+        ${leadTitle ? `<figcaption class="lead-caption"><span>${leadTitle}</span></figcaption>` : ""}
+      </div>
+    </figure>
+  `;
+
+  const series = seriesOrder
+    .filter((category) => groups[category].length > 0)
+    .map((category) => {
+      const items = groups[category];
+      const cards = items.map((filename) => buildCard(filename, category, ++plateNo)).join("");
+
+      return `
+        <section class="gallery-series">
+          <h3 class="series-title" data-count="${String(items.length).padStart(2, "0")} plates">${categoryLabels[category]}</h3>
+          <div class="gallery-grid">${cards}</div>
+        </section>
+      `;
+    })
+    .join("");
+
+  galleryStage.innerHTML = lead + series;
 }
 
 function openLightbox(card) {
@@ -224,7 +287,7 @@ viewButtons.forEach((button) => {
   });
 });
 
-galleryGrid.addEventListener("click", (event) => {
+galleryStage.addEventListener("click", (event) => {
   const card = event.target.closest(".gallery-card");
 
   if (card) {
@@ -232,7 +295,7 @@ galleryGrid.addEventListener("click", (event) => {
   }
 });
 
-galleryGrid.addEventListener("keydown", (event) => {
+galleryStage.addEventListener("keydown", (event) => {
   const card = event.target.closest(".gallery-card");
 
   if (card && (event.key === "Enter" || event.key === " ")) {
@@ -250,6 +313,41 @@ document.addEventListener("keydown", (event) => {
     closeLightbox();
   }
 });
+
+// Live St. Louis (Central) time in the masthead ticker.
+const clockEl = document.querySelector("[data-clock]");
+function tickClock() {
+  if (!clockEl) return;
+  const time = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/Chicago",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false,
+  }).format(new Date());
+  clockEl.textContent = `${time} CT`;
+}
+tickClock();
+setInterval(tickClock, 1000);
+
+// Scroll-reveal: fade sections up as they enter the viewport.
+const reveals = document.querySelectorAll(".reveal");
+if ("IntersectionObserver" in window && reveals.length) {
+  const io = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { rootMargin: "0px 0px -10% 0px", threshold: 0.08 }
+  );
+  reveals.forEach((el) => io.observe(el));
+} else {
+  reveals.forEach((el) => el.classList.add("in"));
+}
 
 renderGallery();
 activateView("profile");
